@@ -1,0 +1,176 @@
+@font-face {
+    font-family: 'neon';
+    src: url(/assets/fonts/NeonFuture.ttf);
+}
+@font-face{
+    font-family: 'message';
+    src: url(/assets/fonts/Gawaa-Regular.otf);
+}
+
+
+
+body {
+    /* fallback for old browsers */
+    background-image: url(/assets/images/wall.jpg);
+    background-size: cover;
+    background-position: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+    }
+    
+    .mask-custom {
+    background: rgba(24, 24, 16, .2);
+    border-radius: 2em;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+    }
+
+    .titleSection{
+        position: absolute;
+        top: 40px;
+        left: 0;
+        display: flex;
+        justify-content: end;
+        right: 100px;
+    }
+    
+    .title{
+        width:150px;
+        height:100px;
+        border:1px solid black;
+        border: 8px double white;
+        border-radius: 15px;
+        box-shadow: 0 0 .2rem #fff,
+                  0 0 .2rem #fff,
+                  0 0 0.8rem #eaff81,
+                  0 0 1rem #ffffff,
+                  inset 0 0 1rem #f8ff98;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 25px;
+      }
+    .neonText {
+        animation: flicker 3s infinite alternate;
+        color: rgb(255, 255, 255);
+        font-family: 'neon';
+        font-size: 25px;
+        width: 150px;
+        letter-spacing: 3px;
+        text-align: center;
+      }
+
+      .messageBox{
+        max-height: 300px;
+        overflow: hidden;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+      .memberler{
+        max-height: 300px;
+        overflow: hidden;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+
+      ::-webkit-scrollbar{      
+        width: 8px;
+        border-radius: 10px;
+        box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 0.8rem #eaff81,
+        0 0 1rem #ffffff,
+        inset 0 0 15rem #f8ff98; 
+                  
+      }
+
+      ::-webkit-scrollbar-thumb{
+        background:rgb(88,51,33);
+        border-radius: 10px;
+        
+      }
+      
+      .sender textarea{
+        background: rgba(24, 24, 16, .2);
+        border-radius: 1em;
+        backdrop-filter: blur(8px);
+        border: 2px solid rgba(255, 255, 255, 0.05);
+        background-clip: padding-box;
+        box-shadow: 0 0 .2rem rgb(0, 0, 0),
+        0 0 .2rem rgb(0, 0, 0),
+        0 0 0.8rem #000000,
+        0 0 1rem #000000;
+        background-color: rgba(0, 0, 0, 0.51); 
+        color: white;  
+        padding: 20px;  
+      }
+      .sender textarea:focus{
+        border: none;
+        box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 0.8rem #eaff81,
+        0 0 1rem #ffffff;
+        background-color: rgba(0, 0, 0, 0.51);    
+        backdrop-filter: blur(3px);
+        color: white;
+     }
+
+     .sender button{
+      background: #f5fcd5;
+      border-radius: 1em;
+      border: 2px solid rgba(255, 255, 255, 0.05);
+      background-clip: padding-box;
+      box-shadow: 0 0 .2rem rgb(0, 0, 0),
+      0 0 .2rem rgb(0, 0, 0),
+      0 0 0.8rem #000000,
+      0 0 1rem #000000;
+      color: black;
+      font-weight: bolder;
+      font-size: 20px;
+      padding: 20px;  
+    }
+    .sender button:hover{
+      border: none;
+      box-shadow: 0 0 .2rem #fff,
+      0 0 .2rem #fff,
+      0 0 0.8rem #eaff81,
+      0 0 1rem #ffffff;
+      background-color: rgba(0, 0, 0, 0.51);    
+      backdrop-filter: blur(3px);
+      color: #f5fcd5;
+   }
+
+.activees{
+  animation: flicker 1s infinite alternate;
+  font-family: "neon";
+  text-shadow:0 0 .2rem #fff,
+  0 0 .2rem #fff,
+  0 0 0.8rem #eaff81,
+  0 0 1rem #ffffff ;
+}
+
+@keyframes flicker {
+      
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px rgb(220, 227, 227),
+      0 0 4px rgb(255, 255, 255),
+      0 0 14px rgb(251, 255, 0),
+      0 0 224px rgb(255, 230, 0),
+      0 0 24px rgb(255, 213, 0),
+      0 0 14px rgb(255, 255, 255),
+      0 0 34px rgb(255, 255, 255),
+      0 0 24px rgb(255, 255, 255);
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  } 
+  
+}
