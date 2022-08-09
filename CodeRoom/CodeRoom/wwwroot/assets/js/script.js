@@ -47,3 +47,10 @@ connection.on("ReceiveMessage", function (message) {
     $(".messageBox").scrollTop(10000)
     $("#textArea").val(``);
 });
+connection.on("UserConnect", function (userId) {
+    $(`#${userId}`).removeClass("d-none");
+});
+connection.on("UserDisconnect", function (userId) {
+    $(`#${userId}`).addClass("d-none");
+});
+

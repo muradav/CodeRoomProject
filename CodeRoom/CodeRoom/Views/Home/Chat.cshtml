@@ -52,7 +52,7 @@
                        {
                            if (User.Identity.Name!=item.UserName)
                            {
-                               <li class="p-2 border-bottom" style="border-bottom: 1px solid rgba(255,255,255,.3) !important;">
+                               <li id="@item.Id" class="p-2 border-bottom d-none" style="border-bottom: 1px solid rgba(255,255,255,.3) !important;">
                                   <div  class="d-flex justify-content-between ">
                                     <div class="d-flex flex-row">
                                       <img style="border:2px solid rgb(255, 255, 255)" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-8.webp" alt="avatar"
@@ -63,7 +63,7 @@
                                       </div>
                                     </div>
                                   </div>
-                                </li>
+                               </li>
                            }
                        }
                   </ul>
@@ -118,7 +118,7 @@
              <div class="row mt-4 sender">
                 <div class="form-outline form-white">
                     <textarea class="form-control" id="textArea" rows="4"></textarea>
-                    <label class="form-label" for="textAreaExample3">Message</label>
+                    <label class="form-label" for="textAreaExample3" style="color:white;">Message</label>
                   </div>
                 <button type="button" id="sendBtn">Send</button>
              </div>
